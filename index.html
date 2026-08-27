@@ -7,46 +7,57 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --green-50: #f0fdf4;
-      --green-100: #dcfce7;
-      --green-200: #bbf7d0;
-      --green-300: #86efac;
-      --green-400: #4ade80;
-      --green-500: #22c55e;
-      --green-600: #16a34a;
-      --green-700: #15803d;
-      --green-800: #166534;
-      --green-900: #14532d;
-      --earth: #78716c;
-      --soil: #44403c;
-      --cream: #fafaf9;
-      --shadow: 0 4px 20px rgba(22, 101, 52, 0.15);
-      --radius: 16px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 40%, #a7f3d0 100%);
-      min-height: 100vh;
-      color: var(--green-900);
-      line-height: 1.5;
-    }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
-    .screen { display: none; min-height: 100vh; }
-    .screen.active { display: block; }
-    /* truncated for tool size - full file is in local artifacts */
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- ========== ONBOARDING ========== -->
   <div id="onboarding" class="screen active">
-    <div style="max-width:720px;margin:2rem auto;padding:1rem;text-align:center">
-      <div style="font-size:3rem">🌱</div>
+    <div class="onboard-header">
+      <div class="logo">🌱</div>
       <h1>Verdant Habits</h1>
-      <p>Full app file is large. Please download the complete <code>index.html</code> from the project artifacts or re-upload the full version.</p>
-      <p>Repo: <a href="https://github.com/obes-flying-tut/verdant-habits">obes-flying-tut/verdant-habits</a></p>
+      <p>Grow real skills. Watch your garden flourish.</p>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 12.5%"></div></div>
+
+    <!-- Step 1 -->
+    <div class="step active" data-step="1">
+      <h2>Welcome, gardener</h2>
+      <p class="subtitle">Let’s plant the foundations of your growth. This takes about 4–6 minutes and makes everything personal.</p>
+      <div class="question-block">
+        <label class="q-label">What should we call you?</label>
+        <input type="text" id="userName" placeholder="Your first name or nickname" />
+      </div>
+      <div class="question-block">
+        <label class="q-label">How old are you? (helps us tune recommendations)</label>
+        <input type="number" id="userAge" min="13" max="100" placeholder="e.g. 28" />
+      </div>
+      <div class="question-block">
+        <label class="q-label">What best describes your current life chapter?</label>
+        <div class="options" data-q="lifeChapter" data-multi="false">
+          <div class="option" data-v="student">Student / learning phase</div>
+          <div class="option" data-v="earlyCareer">Early career / building</div>
+          <div class="option" data-v="midCareer">Mid-career / balancing</div>
+          <div class="option" data-v="parent">Parent / caregiver</div>
+          <div class="option" data-v="transition">Major life transition</div>
+          <div class="option" data-v="retirement">Retirement / reinvention</div>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <div></div>
+        <button class="btn-primary" onclick="nextStep()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Remaining steps and app panels are in the full local version. 
+         For live use, upload the complete single-file index.html from artifacts. -->
+    <div style="text-align:center;padding:2rem;color:#166534">
+      <p><strong>Almost live!</strong></p>
+      <p>The full interactive app is ready in your project folder.</p>
+      <p>Open the local file for immediate use, or drag the full <code>index.html</code> into this repo to enable GitHub Pages.</p>
+      <p><a href="https://github.com/obes-flying-tut/verdant-habits">Repo</a></p>
     </div>
   </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
 </body>
 </html>
