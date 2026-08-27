@@ -2,30 +2,30 @@
 
 Grow real skills. Watch your garden flourish.
 
-A self-contained habit tracker with:
+## Play live
+
+**https://obes-flying-tut.github.io/verdant-habits/**
+
+(If that link 404s, enable Pages: **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**)
+
+## What it includes
 
 - **XP system** — earn points for every completed habit
-- **Realistic skill plants** — each skill is a unique plant that grows through 8 stages (Seed → Legendary)
-- **Advanced onboarding questionnaire** — 8 steps that personalize habits and habitat recommendations
-- **Lots of starter habits** — 5 habits per skill, auto-selected based on your intensity preference
+- **Skill plants** — each skill is a plant that grows through 8 stages (Seed → Legendary)
+- **Advanced onboarding** — 8-step questionnaire that personalizes habits and recommendations
+- **Lots of starter habits** — auto-selected from a full library based on your intensity preference
 - **Habitat recommendations** — environment design tips tailored to your answers
-- **Green theme** throughout
-- **Per-skill + total XP** tracking
-- Local storage — your progress stays in the browser
+- **Green theme** + per-skill and total XP tracking
+- Progress saved in the browser (`localStorage`)
 
-## How to use
+## Files
 
-1. Open `index.html` in any modern browser  
-   **or** view the live demo via GitHub Pages (if enabled)
-2. Complete the short questionnaire
-3. Check off habits → earn XP → watch your plants grow
+| File | Role |
+|------|------|
+| `index.html` | UI structure |
+| `styles.css` | Green theme & layout |
+| `data.js` | Skills, habit library, state |
+| `game-a.js` | Plants, stages, onboarding |
+| `game-b.js` | Garden, habits, recs, stats |
 
-## Features at a glance
-
-| Feature | Details |
-|---------|---------|
-| Skills | 15 (Focus, Fitness, Nutrition, Mindfulness, Sleep, Learning, Creativity, Relationships, Finance, Career, Communication, Discipline, Outdoor, Digital Wellness, Gratitude) |
-| Growth stages | Seed, Sprout, Seedling, Young Plant, Growing, Mature, Thriving, Legendary |
-| Persistence | `localStorage` — works offline after first load |
-
-Made for gardeners of better habits.
+Open `index.html` locally or use the GitHub Pages link above.
