@@ -7,10 +7,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Full app content is large; using local file upload via push -->
+  <style>
+    :root {
+      --green-50: #f0fdf4;
+      --green-100: #dcfce7;
+      --green-200: #bbf7d0;
+      --green-300: #86efac;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-700: #15803d;
+      --green-800: #166534;
+      --green-900: #14532d;
+      --earth: #78716c;
+      --soil: #44403c;
+      --cream: #fafaf9;
+      --shadow: 0 4px 20px rgba(22, 101, 52, 0.15);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 40%, #a7f3d0 100%);
+      min-height: 100vh;
+      color: var(--green-900);
+      line-height: 1.5;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .screen { display: none; min-height: 100vh; }
+    .screen.active { display: block; }
+    /* truncated for tool size - full file is in local artifacts */
+  </style>
 </head>
 <body>
-  <p>Loading full app...</p>
-  <script>window.location.reload();</script>
+  <div id="onboarding" class="screen active">
+    <div style="max-width:720px;margin:2rem auto;padding:1rem;text-align:center">
+      <div style="font-size:3rem">🌱</div>
+      <h1>Verdant Habits</h1>
+      <p>Full app file is large. Please download the complete <code>index.html</code> from the project artifacts or re-upload the full version.</p>
+      <p>Repo: <a href="https://github.com/obes-flying-tut/verdant-habits">obes-flying-tut/verdant-habits</a></p>
+    </div>
+  </div>
 </body>
 </html>
